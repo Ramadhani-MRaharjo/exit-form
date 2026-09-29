@@ -1,0 +1,189 @@
+.print-page {
+	background: #e9edeb;
+	color: #202625;
+	font-family: 'DM Sans', sans-serif;
+	min-height: 100vh;
+	padding: 24px;
+}
+
+.print-toolbar {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	margin: 0 auto 18px;
+	max-width: 210mm;
+}
+
+.print-toolbar a,
+.print-toolbar button {
+	background: #fff;
+	border: 1px solid #d6dfdc;
+	border-radius: 7px;
+	color: #26312f;
+	cursor: pointer;
+	font: inherit;
+	font-size: 13px;
+	min-height: 42px;
+	padding: 10px 16px;
+}
+
+.print-toolbar button {
+	background: #d85f48;
+	border-color: #d85f48;
+	color: #fff;
+	font-weight: 600;
+}
+
+.print-sheet {
+	background: #fff;
+	box-shadow: 0 10px 35px rgb(22 38 34 / 12%);
+	margin: 0 auto;
+	min-height: 297mm;
+	padding: 20mm 19mm;
+	width: 210mm;
+}
+
+.print-sheet h1 {
+	font-size: 21px;
+	margin: 0;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.print-number {
+	color: #5d6865;
+	font-size: 10px;
+	margin: 8px 0 28px;
+	text-align: center;
+}
+
+.print-employee {
+	margin: 0 0 28px;
+}
+
+.print-employee div {
+	display: grid;
+	grid-template-columns: 95px 1fr;
+	margin: 7px 0;
+}
+
+.print-sheet dt,
+.print-sheet dd,
+.print-sheet p {
+	font-size: 11px;
+	line-height: 1.55;
+	margin: 0;
+}
+
+.print-section {
+	margin: 0 0 22px;
+}
+
+.print-section h2 {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 8px;
+}
+
+.print-section h2 small {
+	font-size: 10px;
+	font-weight: 400;
+}
+
+.print-section dl > div {
+	display: grid;
+	grid-template-columns: 125px 1fr;
+	margin: 5px 0;
+}
+
+.print-section dd {
+	min-height: 18px;
+	white-space: pre-wrap;
+}
+
+.print-notes p {
+	min-height: 32px;
+	white-space: pre-wrap;
+}
+
+.print-signatures {
+	display: grid;
+	gap: 42px;
+	grid-template-columns: 1fr 1fr;
+	margin: 46px 0 0;
+	text-align: center;
+}
+
+.print-signatures p {
+	margin-bottom: 3px;
+}
+
+.print-signature-space {
+	height: 75px;
+}
+
+.print-signatures strong,
+.print-signatures span {
+	display: block;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.print-action {
+	align-items: center;
+	display: inline-flex;
+	font-size: 11px;
+	justify-content: center;
+	min-height: 34px;
+	padding: 7px 10px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+	.print-page {
+		padding: 12px;
+	}
+
+	.print-sheet {
+		min-height: 0;
+		padding: 24px 20px;
+		width: 100%;
+	}
+
+	.print-sheet h1 {
+		font-size: 19px;
+	}
+
+	.print-signatures {
+		gap: 18px;
+	}
+}
+
+@page {
+	size: A4;
+	margin: 0;
+}
+
+@media print {
+	.print-page {
+		background: #fff;
+		min-height: 0;
+		padding: 0;
+	}
+
+	.print-toolbar {
+		display: none;
+	}
+
+	.print-sheet {
+		box-shadow: none;
+		margin: 0;
+		min-height: 297mm;
+		padding: 20mm 19mm;
+		width: 210mm;
+	}
+}
